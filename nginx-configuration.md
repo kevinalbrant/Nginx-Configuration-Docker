@@ -47,12 +47,16 @@ server {
     listen [::]:80;
     server_name localhost;
 
+    access_log  /var/www/logs/host.access.log;
+
     return 301 https://$host$request_uri;
 }
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
     server_name localhost;
+
+    access_log  /var/www/logs/host.access.log;
 
     ssl_certificate /etc/nginx/ssl/selfsigned.crt;
     ssl_certificate_key /etc/nginx/ssl/selfsigned.key;
@@ -142,6 +146,9 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -out /etc/nginx/ssl/selfsigned.crt \
   -subj "/C=DE/ST=Test/L=Local/O=Dev/CN=localhost"
 ```
+
+## Access-Log einrichten
+`mkdir -p /var/www/logs/`
 
 ## Nginx neustarten
 `/etc/init.d/nginx restart`
