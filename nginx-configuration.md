@@ -1,9 +1,9 @@
 # Nginx Server Konfigurieren (PHP, SFTP, SSL)
 ## Mit Docker Continainer verbinden
-docker exec -it container_name bash
+`docker exec -it container_name bash`
 
 ## Change Root Passwort
-passwd root
+`passwd root`
 
 ## Install SSH-Server
 1. `apt-get update`
