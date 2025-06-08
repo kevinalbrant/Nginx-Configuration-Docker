@@ -20,9 +20,11 @@
 2. `apt-get upgrade -y`
 
 ## Repository für PHP 8.4 herunterladen
-1. `apt-get -y install lsb-release ca-certificates curl apt-transport-https wget gnupg2
+```
+apt-get -y install lsb-release ca-certificates curl apt-transport-https wget gnupg2
 wget https://packages.sury.org/php/apt.gpg -O /usr/share/keyrings/deb.sury.org-php.gpg
-echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list`
+echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+```
 2. `apt-get update`
 
 ## Nginx installieren
