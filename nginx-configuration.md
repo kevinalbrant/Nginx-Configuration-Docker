@@ -106,9 +106,12 @@ fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 ## mysqli und pdo installieren
 1. `apt update`
 2. `apt install php8.4-mysqli php8.4-pdo php8.4-mysql php8.4-cli php8.4-common`
+3. `apt install php8.4-bz2`
 
 ## Installation prüfen
-`php -m | grep -E 'mysqli|pdo'`
+1. `php -m | grep -E 'mysqli|pdo'`
+2. `php -m | grep bz2`
+
 
 ## php.ini anpassen (/etc/php/8.4/fpm/php.ini) und (/etc/php/8.4/cli/php.ini)
 ```
