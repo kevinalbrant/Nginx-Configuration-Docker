@@ -40,9 +40,7 @@ echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.
 ## Ordner erstellen /var/www/html
 ## Ordner löschen /usr/share/nginx/html
 
-## Nginx konfigurieren (/etc/nginx/conf.d/default.conf)
-## In /etc/nginx/sites-available/default (Debian/Ubuntu) oder einer ähnlichen Konfig:
-## Finde den PHP‑Block (oft auskommentiert) und ändere ihn auf:
+## Nginx konfigurieren (/etc/nginx/conf.d/default.conf) und diesen Teil einfügen
 ```
 server {
     listen 80;
@@ -105,16 +103,6 @@ fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 ## Configure PHP-FPM
 `nano /etc/php/8.4/fpm/pool.d/www.conf #Ändere zu "listen = 127.0.0.1:9000"`
 
-## Nginx neustarten
-`/etc/init.d/nginx restart`
-
-## Nginx testen
-`nginx -t`
-
-## SSH neutastarten
-1. `/etc/init.d/ssh restart`
-2. `/etc/init.d/php8.4-fpm restart`
-
 ## mysqli und pdo installieren
 1. `apt update`
 2. `apt install php8.4-mysqli php8.4-pdo php8.4-mysql php8.4-cli php8.4-common`
@@ -148,9 +136,12 @@ extension=pdo_sqlite
 2. `openssl req -x509 -nodes -days 365 -newkey rsa:2048 \  -keyout /etc/nginx/ssl/selfsigned.key \ -out /etc/nginx/ssl/selfsigned.crt \ -subj "/C=DE/ST=Test/L=Local/O=Dev/CN=localhost"
   `
 
+## Nginx neustarten
+`/etc/init.d/nginx restart`
 
+## Nginx testen
+`nginx -t`
 
 ## Alles neustarten
-1. `/etc/init.d/nginx restart`
-2. `/etc/init.d/ssh restart`
-3. `/etc/init.d/php8.4-fpm restart`
+1. `/etc/init.d/ssh restart`
+2. `/etc/init.d/php8.4-fpm restart`
