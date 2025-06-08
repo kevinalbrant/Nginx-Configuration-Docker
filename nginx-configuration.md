@@ -101,7 +101,7 @@ fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 ```
 
 ## Configure PHP-FPM
-`nano /etc/php/8.4/fpm/pool.d/www.conf #Ändere zu "listen = 127.0.0.1:9000"`
+`nano /etc/php/8.4/fpm/pool.d/www.conf` #Ändere zu "listen = 127.0.0.1:9000"
 
 ## mysqli und pdo installieren
 1. `apt update`
