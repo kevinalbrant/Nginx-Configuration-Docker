@@ -14,6 +14,13 @@
 ## Configure SSH-Server
 1. `nano /etc/ssh/sshd_config` -> Uncomment "Port 22" and "PermitRootLogin yes"
 2. `/etc/init.d/ssh restart`
+```
+Match User testuser
+        ChrootDirectory /var/www/html
+        ForceCommand internal-sftp
+        AllowTcpForwarding no
+        X11Forwarding no
+```
 
 ## Install PHP
 1. `apt-get update`
