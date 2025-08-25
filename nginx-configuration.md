@@ -41,8 +41,8 @@ echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.
 ## PHP 8.4 und FPM installieren
 `apt-get install php8.4 php8.4-fpm php8.4-cli php8.4-mbstring php8.4-xml php8.4-curl php8.4-zip -y`
 
-# PHP-Status überprüfen
-1. `systemctl status php8.4-fpm`
+# PHP-Status überprüfen oder starten
+1. `php-fpm8.4 -F`
 2. optional: `systemctl enable php8.4-fpm`
 
 ## Ordner erstellen /var/www/html
