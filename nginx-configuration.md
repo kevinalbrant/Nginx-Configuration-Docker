@@ -1,3 +1,8 @@
+#Benötigte Ports
+=> 443
+=> 80
+=> 22
+
 # Nginx Server Konfigurieren (PHP, SFTP, SSL)
 ## Mit Docker Continainer verbinden
 `docker exec -it container_name bash`
