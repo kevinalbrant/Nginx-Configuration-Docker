@@ -169,7 +169,7 @@ extension=pdo_sqlite
 
 ## SSL Einrichten, dafür den ordner ssl davor erstellen
 1. `mkdir -p /etc/nginx/ssl`
-2. `nano /etc/nginx/ssl`
+2. `cd /etc/nginx/ssl`
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -keyout /etc/nginx/ssl/selfsigned.key \
