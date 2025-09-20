@@ -180,6 +180,7 @@ Stelle sicher, dass der Ordner root gehört
 `chmod 775 /var/www/html`
 
 Setze das "sticky bit", damit alle neu erstellten Dateien und Ordner automatisch die Gruppe des übergeordneten Ordners erben.
+
 `chmod g+s /var/www/html`
 
 ## Nginx neustarten
