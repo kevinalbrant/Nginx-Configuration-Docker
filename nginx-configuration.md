@@ -63,6 +63,7 @@ echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.
 `mkdir -p /var/www/html`
 
 ## Nginx konfigurieren (/usr/share/nginx/html/conf.d/default.conf) und diesen Teil einfügen
+`nano /usr/share/nginx/html/conf.d/default.conf`
 ```
 server {
     listen 80;
