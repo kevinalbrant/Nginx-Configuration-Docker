@@ -104,6 +104,9 @@ server {
 ```
 
 ## Eine Datei unter /etc/nginx/snippets/fastcgi-php.conf erstellen und das rein
+`mkdir /etc/nginx/snippets`
+
+`nano /etc/nginx/snippets/fastcgi-php.conf`
 ```
 # Standard FastCGI-Konfiguration für PHP
 
