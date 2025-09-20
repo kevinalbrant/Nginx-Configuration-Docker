@@ -176,6 +176,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
   -out /etc/nginx/ssl/selfsigned.crt \
   -subj "/C=DE/ST=Test/L=Local/O=Dev/CN=localhost"
 ```
+3. `cd /`
 
 ## Access-Log einrichten
 `mkdir -p /var/www/logs/`
