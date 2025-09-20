@@ -13,12 +13,6 @@
 ## Benutzer hinzufügen
 `adduser sftpuser`
 
-## Gruppe hinzufügen (falls nicht schon vorhanden)
-`addgroup www-data`
-
-## Füge den neuen Benutzer zur Gruppe www-data hinzu
-`usermod -aG www-data sftpuser`
-
 ## Install SSH-Server
 1. `apt-get update`
 2. `apt-get upgrade`
@@ -182,22 +176,11 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 `mkdir -p /var/www/logs/`
 
 ## Berechtigungen anpassen
-Stelle sicher, dass der Ordner root gehört
 
-`chown root:www-data /var/www/`
+`chown sftpuser:sftpuser /var/www/html`
 
 # Setze die Berechtigungen für den Ordner
-775 bedeutet: Besitzer kann lesen/schreiben/ausführen, Gruppe kann lesen/schreiben/ausführen, andere können nur lesen/ausführen
-
-`chmod 775 /var/www/`
-
-Setze das "sticky bit", damit alle neu erstellten Dateien und Ordner automatisch die Gruppe des übergeordneten Ordners erben.
-
-`chmod g+s /var/www/`
-
-`chown sftpuser:www-data /var/www/html/`
-
-`chmod 775 /var/www/html/`
+`chmod 775 /var/www/html`
 
 ## Nginx neustarten
 `/etc/init.d/nginx restart`
