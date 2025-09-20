@@ -168,6 +168,10 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 ## Access-Log einrichten
 `mkdir -p /var/www/logs/`
 
+## Berechtigungen anpassen
+`chown root:root /var/www/html`
+`chmod 755 /var/www/html`
+
 ## Nginx neustarten
 `/etc/init.d/nginx restart`
 
