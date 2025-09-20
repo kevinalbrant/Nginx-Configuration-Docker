@@ -23,7 +23,6 @@
 1. `nano /etc/ssh/sshd_config` -> Uncomment "Port 22"
 ```
 Match User sftpuser
-        ChrootDirectory /var/www/html
         ForceCommand internal-sftp
         AllowTcpForwarding no
         X11Forwarding no
