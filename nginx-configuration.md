@@ -10,7 +10,7 @@
 ## Change Root Passwort
 `passwd root`
 
-##Neuen Benutzer erstellen
+## Neuen Benutzer erstellen
 `adduser sftpuser`
 
 ## Change Benutzer Passwort
