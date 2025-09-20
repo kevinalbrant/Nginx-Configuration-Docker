@@ -10,6 +10,12 @@
 ## Change Root Passwort
 `passwd root`
 
+##Neuen Benutzer erstellen
+`adduser sftpuser`
+
+## Change Benutzer Passwort
+`passwd sftpuser`
+
 ## Install SSH-Server
 1. `apt-get update`
 2. `apt-get upgrade`
