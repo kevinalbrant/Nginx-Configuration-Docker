@@ -60,7 +60,7 @@ echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.
 2. optional: `systemctl enable php8.4-fpm`
 
 ## Ordner erstellen /var/www/html
-`mkdir /var/www/html`
+`mkdir -p /var/www/html`
 
 ## Nginx konfigurieren (/usr/share/nginx/html/conf.d/default.conf) und diesen Teil einfügen
 ```
