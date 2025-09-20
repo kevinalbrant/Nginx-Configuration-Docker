@@ -144,6 +144,9 @@ fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 
 
 ## php.ini anpassen (/etc/php/8.4/fpm/php.ini) und (/etc/php/8.4/cli/php.ini)
+`nano /etc/php/8.4/fpm/php.ini`
+
+`nano /etc/php/8.4/cli/php.ini`
 ```
 memory_limit = 512M
 
