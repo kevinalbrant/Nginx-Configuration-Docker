@@ -174,16 +174,20 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 ## Berechtigungen anpassen
 Stelle sicher, dass der Ordner root gehört
 
-`chown root:www-data /var/www/html`
+`chown root:www-data /var/www/`
 
 # Setze die Berechtigungen für den Ordner
 775 bedeutet: Besitzer kann lesen/schreiben/ausführen, Gruppe kann lesen/schreiben/ausführen, andere können nur lesen/ausführen
 
-`chmod 775 /var/www/html`
+`chmod 775 /var/www/`
 
 Setze das "sticky bit", damit alle neu erstellten Dateien und Ordner automatisch die Gruppe des übergeordneten Ordners erben.
 
-`chmod g+s /var/www/html`
+`chmod g+s /var/www/`
+
+`chown sftpuser:www-data /var/www/html/`
+
+`chmod 775 /var/www/html/`
 
 ## Nginx neustarten
 `/etc/init.d/nginx restart`
