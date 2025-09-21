@@ -194,8 +194,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 ## Füge das automatische Starten vopn ssh und PHP ein
 1. `nano docker-entrypoint.sh`
 2. ```
-   `/etc/init.d/ssh restart`
-   `/etc/init.d/php8.4-fpm restart`
-``` 
+   /etc/init.d/ssh restart
+   /etc/init.d/php8.4-fpm restart``` 
 
 
