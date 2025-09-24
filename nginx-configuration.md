@@ -217,3 +217,10 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 `chmod -R 755 /var/www/html/wp-content/plugins/`
 
+`find /var/www/html/wp-content/plugins -type d -exec chmod 755 {} \;`
+
+`find /var/www/html/wp-content/plugins -type f -exec chmod 755 {} \;`
+
+`find /var/www/html/wp-content/themes -type d -exec chmod 755 {} \;`
+
+`find /var/www/html/wp-content/themes -type f -exec chmod 755 {} \;`
