@@ -209,6 +209,10 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 `chown -R www-data:www-data /var/www/html/wp-content/uploads`
 
+`chown -R www-data:www-data /var/www/html/wp-content/themes`
+
+`chown -R www-data:www-data /var/www/html/wp-content/plugins`
+
 `chmod -R 755 /var/www/html/wp-content/themes/`
 
 `chmod -R 755 /var/www/html/wp-content/plugins/`
