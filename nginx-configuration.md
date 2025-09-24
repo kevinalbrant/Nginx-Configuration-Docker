@@ -205,5 +205,6 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
    /etc/init.d/php8.4-fpm restart
 
 ## Füge Ordner-Bearbeitung hinzu
+`mkdir -p /var/www/html/wp-content/uploads`
 `chown -R www-data:www-data /var/www/html/wp-content/uploads`
 
