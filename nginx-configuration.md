@@ -67,6 +67,7 @@ server {
 
     return 301 https://$host$request_uri;
 }
+
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
@@ -92,6 +93,12 @@ server {
 
     location ~ /\.ht {
         deny all;
+    }
+
+    location ^~ /wp-content/uploads/ {
+        location ~ \.php$ {
+            deny all;
+        }
     }
 }
 ```
@@ -196,4 +203,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 2. ```
    /etc/init.d/ssh restart
    /etc/init.d/php8.4-fpm restart
+
+## Füge Ordner-Bearbeitung hinzu
+`chown -R www-data:www-data /var/www/html/wp-content/uploads`
 
