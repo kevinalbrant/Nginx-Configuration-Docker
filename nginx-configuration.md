@@ -21,7 +21,7 @@
 5. `apt-get install nano`
 
 ## Configure SSH-Server
-1. `nano /etc/ssh/sshd_config` -> Uncomment "Port 22"
+1. `nano /etc/ssh/sshd_config` -> Uncomment "Port 22" und "PermitRootLogin yes"
 ```
 Match User sftpuser
         ForceCommand internal-sftp
