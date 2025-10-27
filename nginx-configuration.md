@@ -14,10 +14,11 @@
 `useradd sftpuser`
 
 ## Install SSH-Server
-1. `apt-get update`
-2. `apt-get upgrade`
-3. `apt-get install openssh-server`
-4. `apt-get install nano`
+1. `apt install -y dialog apt-utils perl-modules`
+2. `apt-get update`
+3. `apt-get upgrade`
+4. `apt-get install openssh-server`
+5. `apt-get install nano`
 
 ## Configure SSH-Server
 1. `nano /etc/ssh/sshd_config` -> Uncomment "Port 22"
