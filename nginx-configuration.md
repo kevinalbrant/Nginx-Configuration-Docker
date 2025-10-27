@@ -14,9 +14,9 @@
 `useradd sftpuser`
 
 ## Install SSH-Server
-1. `apt install -y dialog apt-utils perl-modules`
-2. `apt-get update`
-3. `apt-get upgrade`
+1. `apt-get update`
+2. `apt-get upgrade`
+3. `apt install -y dialog apt-utils perl-modules`
 4. `apt-get install openssh-server`
 5. `apt-get install nano`
 
