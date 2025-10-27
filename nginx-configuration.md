@@ -11,7 +11,7 @@
 `passwd root`
 
 ## Benutzer hinzufügen
-`adduser sftpuser`
+`useradd sftpuser`
 
 ## Install SSH-Server
 1. `apt-get update`
